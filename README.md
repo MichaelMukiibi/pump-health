@@ -29,6 +29,6 @@ $$\text{Error} = \sum |X_{live}(f) - X_{baseline}(f)|^2$$
 4. **Green/Red Logic:** If the error exceeds a set tolerance $\epsilon$, the system flags a mechanical fault.
 
 ## 🚀 Getting Started
-Dependencies: ```numpy```, ```scipy```, ```matplotlib```
+**Dependencies**: ```numpy```, ```scipy```, ```matplotlib```
 
-Usage: Run the Jupyter notebook to simulate the calibration and testing phases.
+**Usage**: Run the Jupyter notebook to simulate the calibration and testing phases.
