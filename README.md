@@ -57,7 +57,7 @@ Ensure you have the following installed:
     pnpm dev
 ```
 
-### Testing and Evaluation
+## Testing and Evaluation
 
 **Usage**: Run the Jupyter notebook to simulate the calibration and testing phases.
 
@@ -67,13 +67,13 @@ Ensure you have the following installed:
     pip install numpy scipy matplotlib
 ```
 
-### Tech Stack
+## Tech Stack
 - **Framework**: React + Vite
 - **Package Manager**: pnpm
 - **Icons**: Lucide React
 - **Analysis Engine**: Web Audio API (AnalyserNode)
 
-### Usage
+## Usage
 1. **Baseline Calibration**: Start the pump in a known "Healthy" Sate. Click **"Set Baseline"**. The app will record the Fourier coefficients for 3 seconds to create a reference model.
 2. **Live Monitoring**: Click **"Start Live Check"**. The app will continuously compare the live sound to the baselien.
 3. **Status Indicators**:
