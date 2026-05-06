@@ -29,6 +29,55 @@ $$\text{Error} = \sum |X_{live}(f) - X_{baseline}(f)|^2$$
 4. **Green/Red Logic:** If the error exceeds a set tolerance $\epsilon$, the system flags a mechanical fault.
 
 ## 🚀 Getting Started
-**Dependencies**: ```numpy```, ```scipy```, ```matplotlib```
+### Prerequisites
+
+Ensure you have the following installed:
+
+- **Node.js**
+- **pnpm**
+
+### Installation & Setup
+
+1. #### Clone the repository: 
+
+[https://github.com/MichaelMukiibi/pump-health.git](https://github.com/MichaelMukiibi/pump-health.git)
+
+```sh
+    git clone https://github.com/MichaelMukiibi/pump-health.git
+    cd pump-health
+```
+
+2. #### Install dependencies
+```bash
+    pnpm install
+```
+
+3. #### Run  Development Server
+```bash
+    pnpm dev
+```
+
+## Testing and Evaluation
 
 **Usage**: Run the Jupyter notebook to simulate the calibration and testing phases.
+
+**Dependencies**: ```numpy```, ```scipy```, ```matplotlib```
+
+```bash
+    pip install numpy scipy matplotlib
+```
+
+## Tech Stack
+- **Framework**: React + Vite
+- **Package Manager**: pnpm
+- **Icons**: Lucide React
+- **Analysis Engine**: Web Audio API (AnalyserNode)
+
+## Usage
+1. **Baseline Calibration**: Start the pump in a known "Healthy" Sate. Click **"Set Baseline"**. The app will record the Fourier coefficients for 3 seconds to create a reference model.
+2. **Live Monitoring**: Click **"Start Live Check"**. The app will continuously compare the live sound to the baselien.
+3. **Status Indicators**:
+    - **Green**: The Fourier spectrum is stable (System Healthy)
+    - **Red**: Anomalous harmonics detected (Mechanical Fault)
+
+
