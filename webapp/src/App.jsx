@@ -208,6 +208,28 @@ const App = () => {
           </div>
         </div>
 
+        {/* Sensitivity Toggle */}
+        <div className="mb-6 px-2">
+          <div className="flex justify-between items-center mb-2">
+            <label className="text-xs text-slate-500 font-mono flex items-center gap-1">
+              SENSITIVITY: {threshold < 1500 ? 'HIGH' : threshold > 4000 ? 'LOW' : 'NORMAL'}
+            </label>
+            <span className="text-xs font-mono text-slate-400">Limit: {threshold}</span>
+          </div>
+          <input 
+            type="range" 
+            min="500" 
+            max="6000" 
+            step="100"
+            value={threshold}
+            onChange={(e) => setThreshold(parseInt(e.target.value))}
+            className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+          />
+          <p className="text-[10px] text-slate-600 mt-1 italic">
+            *Lower threshold = Higher sensitivity
+          </p>
+        </div>
+
         {/* Action Controls */}
         <div className="grid grid-cols-1 gap-3">
           {!isCalibrated ? (
