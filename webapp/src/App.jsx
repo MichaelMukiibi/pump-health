@@ -40,6 +40,11 @@ const App = () => {
         audioContextRef.current = new (window.AudioContext || window.webkitAudioContext)();
       }
 
+      // Wake up the audioContext incase it was suspended
+      if (audioContextRef.current.state === 'suspended') {
+        await audioContextRef.current.resume();
+      }
+
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       sourceRef.current = audioContextRef.current.createMediaStreamSource(stream);
       analyserRef.current = audioContextRef.current.createAnalyser();
